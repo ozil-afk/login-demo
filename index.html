@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Login Demo</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .logo {
+      color: #1877f2;
+      font-size: 42px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #606770;
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
+
+    .login-box {
+      background: white;
+      padding: 22px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px #00000015;
+    }
+
+    input {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 13px;
+      border: 1px solid #dddfe2;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    .login-btn {
+      display: block;
+      width: 100%;
+      padding: 13px;
+      background: #1877f2;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .forgot {
+      display: inline-block;
+      margin: 18px 0;
+      color: #1877f2;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .divider {
+      border-top: 1px solid #dadde1;
+      margin: 8px 0 20px;
+    }
+
+    .create-btn {
+      display: inline-block;
+      padding: 13px 18px;
+      background: #42b72a;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .notice {
+      font-size: 12px;
+      color: #65676b;
+      margin-top: 18px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <div class="logo">SocialBook</div>
+
+    <p class="subtitle">
+      Connect with friends and the world around you.
+    </p>
+
+    <section class="login-box">
+      <form id="demoForm">
+        <input
+          type="text"
+          placeholder="Email address or phone number"
+          aria-label="Demo email or phone"
+          autocomplete="off"
+          required
+        >
+
+        <input
+          type="password"
+          placeholder="Demo password"
+          aria-label="Demo password"
+          autocomplete="off"
+          required
+        >
+
+        <button class="login-btn" type="submit">
+          Log In
+        </button>
+      </form>
+
+      <a class="forgot" href="#forgot">
+        Forgot password?
+      </a>
+
+      <div class="divider"></div>
+
+      <a class="create-btn" href="#create">
+        Create New Account
+      </a>
+
+      <p class="notice">
+        Design demo only. Do not enter real account details.
+        No information is sent or saved.
+      </p>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById("demoForm").addEventListener(
+      "submit",
+      function(event) {
+        event.preventDefault();
+        alert("Demo only! No login information was sent.");
+        this.reset();
+      }
+    );
+  </script>
+</body>
+</html>
